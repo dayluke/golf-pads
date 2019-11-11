@@ -1,0 +1,2 @@
+Product ID,Published State,Purchase Type,Auto Translate,Locale; Title; Description,Auto Fill Prices,Price,Pricing Template ID
+remove_ads,published,managed_by_android,false,en_US;Remove Ads;Purchasing this will remove all ads from the game.,true,990000,
