@@ -24,7 +24,6 @@ public class GameOverScript : MonoBehaviour {
 		scoreText.text = "Score: " + score.ToString ();
 		bestScore = PlayerPrefs.GetInt ("Best Score");
 		bestScoreText.text = "Best Score: " + bestScore.ToString ();
-		//ball.SetActive (false);
 	}
 
 	public void OnHomeClick()
@@ -42,5 +41,11 @@ public class GameOverScript : MonoBehaviour {
 	public void OnLeaderboardClick()
 	{
         PlayGamesScript.ShowLeaderboardsUI();
+    }
+
+    public void OnReviveClick()
+    {
+        PlayerPrefs.SetInt("Credits", PlayerPrefs.GetInt("Credits") - 25);
+        ball.GetComponent<BallScript>().Revive();
     }
 }
